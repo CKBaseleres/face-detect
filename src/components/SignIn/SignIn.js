@@ -24,6 +24,7 @@ class signIn extends React.Component{
       body: JSON.stringify({
         email: this.state.signInEmail,
         password: this.state.signInPassword
+        })
       })
         .then(response => response.json())
         .then(data => {
@@ -31,9 +32,7 @@ class signIn extends React.Component{
             this.props.onRouteChange('home')
           }
         })
-    })
-    
-  }
+   }
 
   render() {
     const { onRouteChange } = this.props
